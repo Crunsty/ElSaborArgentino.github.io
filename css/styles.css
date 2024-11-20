@@ -1,0 +1,229 @@
+/* Fondo principal */
+body {
+    background-color: #F0F4F8; /* Azul claro */
+}
+
+/* Encabezado */
+header {
+    position: relative;
+    height: 140px;
+    background-color: #3E4E5E; /* Gris azulado oscuro */
+}
+
+/* Título principal */
+h1 {
+    color: #FFA726; /* Naranja cálido */
+    text-align: center;
+    font-size: 50px;
+}
+@media screen and (max-width:500px)  {
+    h1{
+        font-size: 25px;
+    }
+    
+} 
+
+/* Subtítulos */
+h2 {
+    color: #5C6BC0; /* Azul lavanda para subtítulos */
+}
+
+/* Encabezados centrados */
+h3 {
+    text-align: center;
+    color: #37474F; /* Gris oscuro */
+}
+
+/* Fuente de texto */
+.fuente_texto {
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "BLED" 0, "SCAN" 0, "XELA" 0, "YELA" 0;
+    color: #37474F; /* Gris oscuro para texto general */
+}
+
+
+/* Estilo de la Card */
+.card {
+    background-color: #FFFFFF;
+    border: 2px solid #B0BEC5;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease; /* Transición suave para el zoom */
+}
+
+/* Imágenes dentro de la Card */
+.imagen {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Transición suave para la imagen */
+}
+
+/* Efecto hover de la card */
+.card:hover {
+    transform: scale(1.05); /* Agranda la card al pasar el ratón */
+}
+
+/* Efecto hover de la imagen */
+.imagen:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el ratón */
+}
+
+
+/* Título del plato */
+.card h3 {
+    margin: 10px 0 0;
+    color: #37474F;
+}
+
+/* Contenedor con límite de ancho */
+.contenedor_limite {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contenedor padre flexible */
+.contenedor_padre {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Columnas automáticas que se adaptan al tamaño de la pantalla */
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenedor_carrusel {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center; /* Centra el carrusel dentro del contenedor */
+}
+
+.carousel-item img {
+    border: 5px solid beige; /* Cambia el color y grosor del borde según prefieras */
+    border-radius: 20px; /* Opcional: bordes redondeados */
+    margin: 0 auto; /* Centra la imagen dentro del slide */
+}
+
+
+/* Enlaces */
+a {
+    color: #039BE5; /* Azul vibrante para enlaces */
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+a:hover{
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+/* Barra de navegación personalizada */
+.custom-navbar {
+    background-color: #3E4E5E; /* Gris azulado oscuro para el fondo */
+}
+
+/* Estilo de marca */
+.custom-navbar .navbar-brand {
+    color: #FFA726; /* Naranja cálido */
+    font-weight: bold;
+}
+
+.custom-navbar .navbar-brand:hover {
+    color: #FFCC80; /* Naranja claro */
+}
+
+/* Enlaces de navegación */
+.custom-navbar .nav-link {
+    color: #FFFFFF; /* Blanco para los enlaces */
+    font-weight: 500;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #FFA726; /* Naranja cálido al pasar el mouse */
+}
+
+/* Formulario de búsqueda */
+.custom-navbar .form-control {
+    background-color: #E0E0E0; /* Gris claro para el campo de búsqueda */
+    border: none;
+    color: #3E4E5E; /* Gris oscuro para el texto */
+}
+
+.custom-navbar .form-control::placeholder {
+    color: #3E4E5E; /* Color del texto de marcador de posición */
+}
+
+.custom-navbar .btn-custom-search {
+    background-color: #FFA726; /* Naranja cálido para el botón */
+    color: #FFFFFF;
+    border: none;
+}
+
+.custom-navbar .btn-custom-search:hover {
+    background-color: #FFCC80; /* Naranja claro al pasar el mouse */
+    color: #3E4E5E; /* Gris azulado oscuro */
+}
+
+/* Recetas css */
+/* Estilo para las tarjetas */
+.card {
+    text-align: center;
+    margin: 15px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.card p {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilo para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mostrar el modal cuando se activa con :target */
+.modal:target {
+    display: flex;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500
+}
